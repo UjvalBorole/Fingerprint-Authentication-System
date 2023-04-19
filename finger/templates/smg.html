@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Fingerprint Authentication System</title>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+ 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
+</head>
+
+<body>
+ <div class="container my-2" style="">
+    <br><br>
+ <!-- Section: Design Block -->
+ <section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <br>
+            <h1 class="text-center">Fingerprint Authentication System </h1>
+               
+  
+                    
+                        <div class="container py-5 h-100">
+                          <div class="row d-flex align-items-center justify-content-center h-100">
+                            <div class="col-md-8 col-lg-7 col-xl-6">
+                                <button><h5>Fingerprint Result</h5></button>
+                                <br>
+                                <br>
+                              <img src="{% static 'img_result/result_image.jpg' %}"
+                                class="img-fluid" alt="Phone image" width="700px">
+                            </div>
+
+                            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                                <form enctype="multipart/form-data" action="{% url 'index' %}" method="post"> 
+                                    <div class="form-outline mb-4">
+                                      <input type="email" name = "email" class="form-control" />
+                                      <label class="form-label" for="form3Example3">Email address</label>
+                                    </div>
+                                    {% csrf_token %}
+                                   
+                                    <div class="row">
+                                      <div class="col-1">
+                                        <label for="my_uploaded_file"  name="my_uploaded_file"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwamMPo_uzThvuihgzqUir79i3W2832eQ9L5qhlS8Q&s" width=30px height=30px ></label>
+                                      
+                                      </div>
+                                      <div class="col-8">
+                                          <input type="file"  name="my_uploaded_file"  /> 
+                                      </div>
+                                      <div class="col">
+                                        <input type="submit" value="Submit" />
+                                      </div>
+                                    </div> 
+                  
+                                   {% comment %} <div><a href="">Not Match add Fingerprint</a></div>      {% endcomment %}
+                                </form>
+                                  <br>
+                                <!-- Email input -->
+                                <div class="form-outline mb-4">
+                                    <h5 class="card-title">Fingerprint Matching Result</h5>
+                                    <p class="card-text">
+                                      <b>Matching :</b>  {{data}}
+                                    </p>
+                                </div>
+                      
+                                <!-- Password input -->
+                             
+                              
+                      
+                               
+                             
+                            </div>
+                          </div>
+                        </div>
+                      
+  
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+  <!-- Section: Design Block -->
+
+  <!-- MDB -->
+  <script type="text/javascript" src="static/js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
+</html>4320

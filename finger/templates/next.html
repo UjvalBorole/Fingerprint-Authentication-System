@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Fingerprint Authentication System</title>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+ 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Fingerprint Matching Result</h5>
+              <p class="card-text">
+                <b>Matching :</b>  {{data}}
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+            </div>
+            <img src="{% static 'img_result/result_image.jpg' %}" class="card-img-bottom " alt="Camera"/>
+          </div>
+    </div>   
+    <!-- MDB -->
+  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+</html>
